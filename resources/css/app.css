@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@import "tailwindcss-animated";
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@plugin "daisyui" {
+    themes: all;
+}
+
+/* ---------- Default Raleway ---------- */
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* default weight */
+    font-style: normal; /* default style */
+}
+
+/* ---------- Weight Classes ---------- */
+.raleway-100 {
+    font-weight: 100;
+}
+.raleway-200 {
+    font-weight: 200;
+}
+.raleway-300 {
+    font-weight: 300;
+}
+.raleway-400 {
+    font-weight: 400;
+}
+.raleway-500 {
+    font-weight: 500;
+}
+.raleway-600 {
+    font-weight: 600;
+}
+.raleway-700 {
+    font-weight: 700;
+}
+.raleway-800 {
+    font-weight: 800;
+}
+.raleway-900 {
+    font-weight: 900;
+}
+
+/* ---------- Italic Class ---------- */
+.raleway-italic {
+    font-style: italic;
+}
+
+.animate-glow-on-scroll.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 25px 10px rgba(0, 149, 255, 0.085);
+    transition: all 0.8s ease-in-out;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+ .card-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        .price-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .rating-glow {
+            filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.3));
+        }
+        .image-overlay {
+            background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, transparent 100%);
+        }
