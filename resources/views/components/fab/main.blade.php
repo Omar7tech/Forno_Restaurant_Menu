@@ -1,9 +1,27 @@
 <div class="fab">
     <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-    <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-info">F</div>
+    <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-accent btn-soft">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+
+        </svg>
+    </div>
 
     <!-- buttons that show up when FAB is open -->
-    <button class="btn btn-lg">Button A</button>
-    <button class="btn btn-lg">Button B</button>
-    <button class="btn btn-lg">Button C</button>
+    <a class="btn btn-lg p-5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+
+        </svg>
+        Call Us
+    </a>
+    <a class="btn btn-lg p-5"><img src="{{ asset('icons/whatsapp-icon.png') }}" alt="" class="w-10"></a>
+    <a class="btn btn-lg p-5"><img src="{{ asset('icons/instagram.png') }}" alt="" class="w-10"></a>
+    <a class="btn btn-lg p-5"><img src="{{ asset('icons/facebook.png') }}" alt="" class="w-10"></a>
+    <a class="btn btn-lg p-5"><img src="{{ asset('icons/google-maps.png') }}" alt="" class="w-10"></a>
+
+
 </div>

@@ -1,4 +1,4 @@
-<div class="sticky top-0 z-50 bg-base-100/85 backdrop-blur-md scrollbar-hide scroll-smooth">
+<div class="sticky top-15 z-50 bg-base-100/85 backdrop-blur-md scrollbar-hide scroll-smooth">
     <div class="w-full relative">
         <!-- Left arrow -->
         <div class="absolute left-2 top-1/2 -translate-y-1/2 z-10 opacity-60">

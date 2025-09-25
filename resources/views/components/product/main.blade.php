@@ -1,7 +1,12 @@
-<div class="card w-full bg-base-100 shadow-sm p-2">
+<div class="card w-full bg-base-100 shadow-[2px_0_3px_-1px_rgb(0_0_0_/_0.1)] p-2">
     <div class="card-body flex-row items-center p-0">
-        <img src="https://picsum.photos/200" alt="Pasta" class="w-14 h-14 rounded-md object-cover" />
-        <div class="flex-1 border-l-2 border-blue-300/50 ps-2">
+        <figure
+            class="relative overflow-hidden cursor-pointer ring-teal-700   ring-offset-base-100 rounded-full ring-2 ring-offset-2">
+            <img loading="lazy" src="https://picsum.photos/200/300"
+                class="w-16 h-16 object-cover shadow group-hover:scale-110 transition-transform duration-300"
+                itemprop="image" />
+        </figure>
+        <div class="flex-1 border-l-2 border-base-300/50 ps-2">
             <div class="card-title text-sm mb-0 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                     class="size-4 text-yellow-500">
@@ -9,8 +14,6 @@
                         d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
                         clip-rule="evenodd" />
                 </svg>
-
-
                 <h2>
                     Spaghetti Carbonara
                 </h2>
