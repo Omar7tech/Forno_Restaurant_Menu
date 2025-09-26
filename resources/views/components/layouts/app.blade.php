@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
@@ -20,7 +20,6 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ asset('favicon.png') }}">
     <meta property="og:url" content="{{ url()->current() }}">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Forno Flat Bread – Menu | Aley, Lebanon">
     <meta name="twitter:description"
@@ -37,18 +36,13 @@
 </head>
 
 <body class='w-full overflow-x-hidden raleway raleway-500'>
+    <div id="progress-bar" class="fixed top-0 left-0 h-0.5 bg-teal-700 z-200 w-0"></div>
     {{-- <div
         class="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,255,255,0.1),rgba(255,255,255,0))]">
     </div> --}}
     {{ $slot }}
 
-    {{-- <style>
-        @media (min-width: 1024px) { /* lg screens and above */
-            body {
-                background-image: none !important;
-            }
-        }
-    </style> --}}
+    <x-footer.footeryear />
 
     <x-fab.main />
 
@@ -77,6 +71,15 @@
             document.querySelectorAll(".animate-glow-on-scroll").forEach(el => {
                 observer.observe(el);
             });
+        });
+    </script>
+    <script>
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+
+            document.getElementById("progress-bar").style.width = scrollPercent + "%";
         });
     </script>
 </body>

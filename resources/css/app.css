@@ -66,28 +66,53 @@
 
 /* Hide scrollbar for Chrome, Safari, Edge */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Hide scrollbar for Firefox */
 .scrollbar-hide {
-  scrollbar-width: none;
-  -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE & Edge */
 }
 
- .card-hover {
-            transition: all 0.2s ease-in-out;
-        }
-        .card-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-        }
-        .price-badge {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .rating-glow {
-            filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.3));
-        }
-        .image-overlay {
-            background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, transparent 100%);
-        }
+.card-hover {
+    transition: all 0.2s ease-in-out;
+}
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+.price-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.rating-glow {
+    filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.3));
+}
+.image-overlay {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+}
+
+.neon-logo {
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.248))
+        drop-shadow(0 0 5px rgba(0, 255, 255, 0.137))
+        drop-shadow(0 0 15px rgba(0, 255, 255, 0.219))
+        drop-shadow(0 0 30px rgba(0, 255, 255, 0.368));
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px rgba(0, 255, 255, 0.473))
+            drop-shadow(0 0 2px rgba(0, 255, 255, 0.712))
+            drop-shadow(0 0 3px rgb(0, 255, 255));
+  }
+  50% {
+    filter: drop-shadow(0 0 2px #0ff)
+            drop-shadow(0 0 3px #0ff)
+            drop-shadow(0 0 4px #0ff);
+  }
+}
+
+.neon-logo {
+    animation: neonPulse 2s infinite alternate;
+}

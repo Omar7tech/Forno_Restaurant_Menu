@@ -1,6 +1,5 @@
 <div class="fab">
-    <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-    <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-accent btn-soft">
+    <div tabindex="0" role="button" class="btn btn-lg btn-circle bg-base-300 btn-soft">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -9,7 +8,6 @@
         </svg>
     </div>
 
-    <!-- buttons that show up when FAB is open -->
     <a class="btn btn-lg p-5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
