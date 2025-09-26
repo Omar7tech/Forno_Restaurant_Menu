@@ -16,10 +16,10 @@
     </div>
     <div class="navbar-center">
         <a>
-            <img src="{{ asset('images/title-nobg.png') }}" alt=""
-                class="w-15 animate-fade-down animate-once animate-ease-linear">
-            {{-- <img src="{{ asset('images/logo-white-nobg.png') }}" alt=""
+           {{--  <img src="{{ asset('images/title-nobg.png') }}" alt=""
                 class="w-15 animate-fade-down animate-once animate-ease-linear"> --}}
+            <img src="{{ asset('images/logo-white-nobg.png') }}" alt=""
+                class="w-15 animate-fade-down animate-once animate-ease-linear">
         </a>
     </div>
     <div class="navbar-end">

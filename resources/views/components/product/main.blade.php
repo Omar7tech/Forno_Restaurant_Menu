@@ -1,5 +1,5 @@
 @props(['product'])
-<div class="card w-full bg-base-200/60  {{-- shadow-[2px_0_3px_-1px_rgb(0_0_0_/_0.1)] --}} p-2 rounded-s-full rounded-e-2xl">
+<div class="card w-full bg-base-200  {{-- shadow-[2px_0_3px_-1px_rgb(0_0_0_/_0.1)] --}} p-2 rounded-s-full rounded-e-2xl">
     <div class="card-body flex-row items-center p-0">
         <div class="avatar ">
             <div
@@ -31,7 +31,8 @@
             @endif
         </div>
         @if ($product->price)
-            <span class="font-sans font-bold text-xs md:text-sm lg:text-md bg-base-200 p-1.5 rounded-md  shadow-sm">{{ $product->price }}$</span>
+            <span
+                class="font-sans font-bold text-xs md:text-sm lg:text-md bg-base-200 p-1.5 rounded-md  shadow-sm">{{ $product->price }}$</span>
         @endif
     </div>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" class="scroll-smooth">
+<html lang="en" data-theme="black" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
