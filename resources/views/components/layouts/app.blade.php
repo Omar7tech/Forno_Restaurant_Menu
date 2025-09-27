@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="black" class="scroll-smooth">
+<html lang="en" data-theme="light" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8">
@@ -25,7 +25,6 @@
     <meta name="twitter:description"
         content="Authentic Mediterranean & Italian flatbreads, manakish, pizzas, wraps, pasta, salads, desserts, and beverages in Aley.">
     <meta name="twitter:image" content="{{ asset('favicon.png') }}">
-    <meta name="theme-color" content="#FFFFFFFF">
     <meta name="author" content="Forno Flat Bread">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +35,14 @@
 </head>
 
 <body class='w-full overflow-x-hidden raleway raleway-500'>
+
     <div id="progress-bar" class="fixed top-0 left-0 h-0.5 bg-teal-700 z-200 w-0"></div>
+    <div
+        class="absolute top-0 z-[-2] h-100 w-screen
+         bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(45,212,191,0.25),rgba(255,255,255,0))]
+         dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(45,212,191,0.15),rgba(0,0,0,0))]">
+    </div>
+
     {{-- <div
         class="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,255,255,0.1),rgba(255,255,255,0))]">
     </div> --}}

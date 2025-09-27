@@ -32,7 +32,7 @@
         </div>
         @if ($product->price)
             <span
-                class="font-sans font-bold text-xs md:text-sm lg:text-md bg-base-200 p-1.5 rounded-md  shadow-sm">{{ $product->price }}$</span>
+                class=" font-mono font-semibold text-sm md:text-sm lg:text-md bg-base-100 p-1.5 rounded-sm  shadow-sm">{{ $product->price }}<span class="text-gray-600 ml-0.5">$</span></span>
         @endif
     </div>
 </div>
