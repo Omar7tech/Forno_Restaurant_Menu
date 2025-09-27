@@ -1,6 +1,6 @@
 <div>
 
-    <x-nav.main1 />
+
     <x-hero.main2 />
     <x-categories.title />
     <x-categories.main1 :$categories />
@@ -25,7 +25,6 @@
 
     </div>
 
-    <x-socials-bottom.main1 />
-    <x-footer.main />
+    
 
 </div>

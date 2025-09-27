@@ -4,12 +4,12 @@
     </div>
     <div class="hero">
         <div class="container flex justify-center items-center flex-col">
-            <img src="{{ asset('images/cropped_circle_image.png') }}" alt="Forno Flat Bread Logo"
+           {{--  <img src="{{ asset('images/cropped_circle_image.png') }}" alt="Forno Flat Bread Logo"
                 class="w-90 rounded-full transition-all duration-700 opacity-10 scale-75 animate-fade-down animate-once animate-duration-[2000ms] animate-delay-1000 animate-ease-out animate-alternate
                 shadow-[0_0_0px_0px_rgba(0,150,255,0)]
-                animate-glow-on-scroll" />
-            {{-- <img src="{{ asset('images/title-nobg.png') }}" alt="Forno Flat Bread Logo"
-                class="my-15 neon-logo w-90 transition-all duration-700 scale-75 animate-fade-down animate-once animate-duration-[2000ms] animate-delay-1000 animate-ease-out animate-alternate" /> --}}
+                animate-glow-on-scroll" /> --}}
+            <img src="{{ asset('images/title-nobg.png') }}" alt="Forno Flat Bread Logo"
+                class="my-15 neon-logo w-90 transition-all duration-700 scale-75 animate-fade-down animate-once animate-duration-[2000ms] animate-delay-1000 animate-ease-out animate-alternate" />
 
         </div>
     </div>

@@ -10,5 +10,5 @@
             Mediterranean Italian Restaurant in Aley, Lebanon
         </p>
     </aside>
-    
+
 </footer>

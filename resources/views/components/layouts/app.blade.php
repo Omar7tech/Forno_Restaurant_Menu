@@ -36,58 +36,22 @@
 
 <body class='w-full overflow-x-hidden raleway raleway-500'>
 
-    <div id="progress-bar" class="fixed top-0 left-0 h-0.5 bg-teal-700 z-200 w-0"></div>
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-teal-700 z-200 w-0"></div>
     <div
         class="absolute top-0 z-[-2] h-100 w-screen
          bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(45,212,191,0.25),rgba(255,255,255,0))]
          dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(45,212,191,0.15),rgba(0,0,0,0))]">
     </div>
-
-    {{-- <div
-        class="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,255,255,0.1),rgba(255,255,255,0))]">
-    </div> --}}
+    <x-nav.main1 />
     {{ $slot }}
 
+    <x-socials-bottom.main1 />
+    <x-footer.main />
     <x-footer.footeryear />
-
     <x-fab.main />
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true, // animation happens only once
-            offset: 100, // trigger point
-            easing: 'ease-in-out', // smoothness
-            duration: 1200, // default duration
-        });
-    </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    }
-                });
-            }, {
-                threshold: 0.3
-            });
-
-            document.querySelectorAll(".animate-glow-on-scroll").forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script>
-    <script>
-        window.addEventListener("scroll", () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-
-            document.getElementById("progress-bar").style.width = scrollPercent + "%";
-        });
-    </script>
 </body>
 
 

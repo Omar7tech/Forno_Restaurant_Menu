@@ -26,6 +26,8 @@ class Category extends Model
             ->saveSlugsTo('slug');
     }
 
+    protected $guarded = [];
+
     public function getRouteKeyName()
     {
         return 'slug';
@@ -42,6 +44,6 @@ class Category extends Model
         $query->where('active', 1);
     }
 
-    
+
 
 }

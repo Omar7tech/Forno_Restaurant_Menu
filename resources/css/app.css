@@ -116,3 +116,104 @@
 .neon-logo {
     animation: neonPulse 2s infinite alternate;
 }
+
+/* Navigation Drawer Styles */
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background: hsl(var(--b1));
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.nav-drawer.open {
+    left: 0;
+}
+
+.nav-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-drawer-content {
+    padding: 2rem 1.5rem;
+}
+
+.nav-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(var(--bc) / 0.1);
+}
+
+.nav-drawer-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: hsl(var(--bc));
+    padding: 0.5rem;
+}
+
+.nav-drawer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-drawer-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-drawer-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: hsl(var(--bc));
+    border-radius: var(--rounded-btn);
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-drawer-menu a:hover {
+    background: hsl(var(--b2));
+    border-left-color: hsl(var(--p));
+}
+
+.nav-drawer-menu a.active {
+    background: hsl(var(--b3));
+    border-left-color: hsl(var(--p));
+    font-weight: 600;
+}
+
+/* Ensure body doesn't scroll when drawer is open */
+body.drawer-open {
+    overflow: hidden;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .nav-drawer {
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+    }
+}

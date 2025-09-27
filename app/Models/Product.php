@@ -15,6 +15,7 @@ class Product extends Model
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory , HasSlug;
 
+    protected $guarded = [];
 
     /**
      * Get the options for generating the slug.

@@ -7,10 +7,17 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                 </svg>
             </div>
-            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                <li><a>Homepage</a></li>
-                <li><a>Portfolio</a></li>
-                <li><a>About</a></li>
+            <ul tabindex="0"
+                class="menu menu-xl dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow font-bold">
+                <li><a wire:navigate href="{{ route('home') }}">
+                        <div aria-label="status" class="status {{ Route::is('home') ? 'status-info' : '' }} status-xl"></div>Menu
+                    </a></li>
+                <li><a wire:navigate href="{{ route('about') }}">
+                        <div aria-label="status" class="status {{ Route::is('about') ? 'status-info' : '' }}  status-xl"></div>About
+                    </a></li>
+                <li><a wire:navigate href="{{ route('contact') }}">
+                        <div aria-label="status" class="status {{ Route::is('contact') ? 'status-info' : '' }}  status-xl"></div>Contact
+                    </a></li>
             </ul>
         </div>
     </div>
