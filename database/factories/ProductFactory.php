@@ -21,7 +21,6 @@ class ProductFactory extends Factory
 
         return [
             'name'        => $this->faker->words(1, true),
-            'slug'        => $this->faker->unique()->slug(),
             'description' => $this->faker->text(25),
             'sort'        => 0,
             'active'      => $this->faker->boolean(80), // 80% chance active

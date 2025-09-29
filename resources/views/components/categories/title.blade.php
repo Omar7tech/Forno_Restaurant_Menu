@@ -1,7 +1,7 @@
 
 <div class="text-xl font-bold mt-10 flex items-center justify-between gap-2 px-2">
     <h1
-        class="raleway raleway-900 ms-6 bg-gradient-to-l from-slate-900 dark:from-slate-700   to-teal-700 bg-clip-text text-transparent">
+        class="raleway raleway-900 ms-6 bg-gradient-to-l from-slate-900 dark:from-slate-700   to-cyan-500 bg-clip-text text-transparent">
         Categories
     </h1>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-gray-500/50">

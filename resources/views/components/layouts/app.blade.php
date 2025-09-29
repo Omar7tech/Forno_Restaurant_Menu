@@ -36,7 +36,6 @@
 
 <body class='w-full overflow-x-hidden raleway raleway-500'>
 
-    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-teal-700 z-200 w-0"></div>
     <div
         class="absolute top-0 z-[-2] h-100 w-screen
          bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(45,212,191,0.25),rgba(255,255,255,0))]

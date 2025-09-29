@@ -1,4 +1,4 @@
-<div class="flex justify-center mt-10 px-4"  data-theme="black">
+<div class="flex justify-center mt-10 px-4">
     <div class="w-full max-w-md">
         <div class="mockup-window border border-base-300 w-full my-5 mx-auto rounded-2xl shadow-lg bg-base-100">
 

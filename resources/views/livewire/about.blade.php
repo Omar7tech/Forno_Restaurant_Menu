@@ -36,4 +36,31 @@
             </div>
         </div>
     </div>
+    @php
+        $aboutPageData = [
+            '@context' => 'https://schema.org',
+            '@type' => 'AboutPage',
+            'name' => 'About Forno Flat Bread – Aley',
+            'description' =>
+                'Welcome to Forno Flatbread Co. – Aley, where Mediterranean tradition meets Italian cuisine. Serving flatbreads, manakish, pizzas, wraps, pasta, salads, desserts.',
+            'url' => url()->current(),
+            'image' => asset('images/banner-outside.png'),
+            'mainEntity' => [
+                '@type' => 'Restaurant',
+                'name' => 'Forno Flat Bread',
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'addressLocality' => 'Aley',
+                    'addressCountry' => 'Lebanon',
+                ],
+                'description' =>
+                    'Mediterranean & Italian cuisine: flatbreads, pizzas, wraps, pasta, salads, and desserts.',
+            ],
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+{!! json_encode($aboutPageData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+</script>
+
 </section>
