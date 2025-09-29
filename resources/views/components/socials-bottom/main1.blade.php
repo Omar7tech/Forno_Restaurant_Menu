@@ -12,11 +12,7 @@
                 {{-- <img src="{{ asset('images/forno-logo-first.png') }}" alt="Forno Logo"
                     class="w-32 md:w-40 object-contain"> --}}
 
-                <img
-          src="{{ asset('images/logo-white-nobg.png') }}"
-          alt="Forno Logo"
-          class="w-32 md:w-40 object-contain"
-        >
+                <img src="{{ asset('images/logo-white-nobg.png') }}" alt="Forno Logo" class="w-32 md:w-40 object-contain">
             </div>
 
             <div class="mx-6 mb-6 bg-base-200 rounded-xl py-4 px-5 flex justify-center items-center gap-2 neon-logo ">

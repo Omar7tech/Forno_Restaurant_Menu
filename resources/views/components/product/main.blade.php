@@ -5,7 +5,7 @@
 @endphp
 
 <div id="product-{{ $product->slug }}"
-    class="scroll-mt-20 group relative bg-base-200 rounded-2xl overflow-hidden border border-base-300 hover:border-accent hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+    class="scroll-mt-20 group relative bg-base-200 rounded-2xl overflow-hidden border border-base-300 hover:border-cyan-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
     itemscope itemtype="https://schema.org/Product">
 
     <meta itemprop="sku" content="{{ $product->slug }}" />
@@ -64,16 +64,16 @@
                     @if ($product->name)
                         <div class="flex gap-2  items-center">
 
-                            <h3 class="text-base font-bold text-base-content leading-tight group-hover:text-primary transition-colors duration-200"
+                            <h3 class="text-base font-bold text-base-content leading-tight group-hover:text-cyan-600 transition-colors duration-200"
                                 itemprop="name">
                                 {{ $product->name }}
                             </h3>
                             @if (!$image && ($product->featured || $product->new))
                                 <div class="flex gap-1">
                                     @if ($product->featured)
-                                        <div class="btn btn-warning btn-soft btn-xs"><svg
+                                        <div class="badge badge-soft badge-warning badge-xs"><svg
                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="size-4">
+                                                fill="currentColor" class="size-3">
                                                 <path fill-rule="evenodd"
                                                     d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
                                                     clip-rule="evenodd" />
@@ -81,7 +81,7 @@
                                         </div>
                                     @endif
                                     @if ($product->new)
-                                        <div class="btn btn-success btn-soft btn-xs">New</div>
+                                        <div class="badge badge-soft badge-success badge-xs">New</div>
                                     @endif
                                 </div>
                             @endif
@@ -155,9 +155,9 @@
 
                 <!-- Modal Footer -->
                 <div class="p-4 border-t border-base-300 flex justify-between items-center">
-                    <span id="modalPrice" class="text-2xl font-bold text-primary"></span>
+                    <span id="modalPrice" class="text-2xl font-bold text-cyan-600"></span>
                     <form method="dialog">
-                        <button class="btn btn-primary">Close</button>
+                        <button class="btn ">Close</button>
                     </form>
                 </div>
             </div>

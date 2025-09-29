@@ -21,8 +21,8 @@
                 <li class="flex-shrink-0">
                     <a href="#category-{{ $category->slug }}"
                         class="px-4 py-2 rounded-full bg-base-300
-                        border border-[#00a6bf] text-sm font-medium text-base-content
-                        hover:bg-[#00bfa6] hover:text-white
+                        border border-cyan-600 text-sm font-medium text-base-content
+                        hover:bg-cyan-600 hover:text-white
                         transition-all duration-200 cursor-pointer"
                         title="{{ $category->name }} category"
                         itemprop="hasMenuSection"

@@ -2,7 +2,9 @@
 
 namespace App\Filament\Resources\Categories\Schemas;
 
+use Filament\Schemas\Components\Grid;
 use Filament\Infolists\Components\IconEntry;
+use Filament\Schemas\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
 
@@ -12,21 +14,42 @@ class CategoryInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('name'),
-                TextEntry::make('slug'),
-                TextEntry::make('description')
-                    ->placeholder('-'),
-                TextEntry::make('sort')
-                    ->numeric()
-                    ->placeholder('-'),
-                IconEntry::make('active')
-                    ->boolean(),
-                TextEntry::make('created_at')
-                    ->dateTime()
-                    ->placeholder('-'),
-                TextEntry::make('updated_at')
-                    ->dateTime()
-                    ->placeholder('-'),
+                Section::make('Category Information')
+                ->columnSpanFull()
+                    ->icon('heroicon-o-tag')
+                    ->schema([
+                        Grid::make(2)
+                            ->schema([
+                                TextEntry::make('name')
+                                    ->label('Category Name')
+                                    ->weight('bold')
+                                    ->size('lg'),
+
+                                IconEntry::make('active')
+                                    ->label('Active')
+                                    ->boolean(),
+                            ]),
+
+                        TextEntry::make('description')
+                            ->label('Description')
+                            ->placeholder('-')
+                            ->columnSpanFull(),
+
+                        Grid::make(2)
+                            ->schema([
+                                TextEntry::make('created_at')
+                                    ->label('Created At')
+                                    ->dateTime()
+                                    ->placeholder('-')
+                                    ->since(),
+
+                                TextEntry::make('updated_at')
+                                    ->label('Updated At')
+                                    ->dateTime()
+                                    ->placeholder('-')
+                                    ->since(),
+                            ]),
+                    ]),
             ]);
     }
 }

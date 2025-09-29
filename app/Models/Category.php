@@ -35,7 +35,7 @@ class Category extends Model
 
      public function products(): HasMany
     {
-        return $this->hasMany(Product::class)->where('active', 1)->orderBy('sort', 'asc');
+        return $this->hasMany(Product::class)->orderBy('sort', 'asc');
     }
 
     #[Scope]
