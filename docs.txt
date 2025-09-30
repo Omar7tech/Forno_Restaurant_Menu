@@ -1,0 +1,10 @@
+php artisan optimize:clear
+--after you edit the env and edit the app url
+open tinker and paste this : Spatie\Sitemap\SitemapGenerator::create(config('app.url'))->writeToFile(public_path('sitemap.xml'));
+
+in the robots.txt
+
+User-agent: *
+Disallow:
+
+Sitemap: https://yourdomain.com/sitemap.xml

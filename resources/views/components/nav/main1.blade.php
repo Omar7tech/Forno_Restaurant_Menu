@@ -1,3 +1,7 @@
+@props(['settings'])
+@php
+    $theme = $settings->theme;
+@endphp
 <nav class="sticky top-0 z-100 navbar bg-base-100 shadow-sm">
     <div class="navbar-start">
         <div class="dropdown">
@@ -81,15 +85,24 @@
     <!-- Logo -->
     <div class="navbar-center">
         <a>
-            <img src="{{ asset('images/title-nobg.png') }}" alt=""
-                class="w-15 animate-fade-down animate-once animate-ease-linear">
+            @if ($theme === 'light')
+                <img src="{{ asset('images/title-nobg.png') }}" alt=""
+                    class="w-15 animate-fade-down animate-once animate-ease-linear">
+            @else
+                <img src="{{ asset('images/logo-white-nobg.png') }}" alt=""
+                    class="w-15 animate-fade-down animate-once animate-ease-linear">
+            @endif
         </a>
     </div>
 
     <!-- Actions -->
     <div class="navbar-end">
-        <a href="">
-            <img src="{{ asset('icons/whatsapp-icon.png') }}" alt="" class="w-10">
-        </a>
+        @if ($settings->whatsapp_active && $settings->whatsapp_number && $settings->whatsapp_number_on_top)
+            <a href="https://wa.me/{{ $settings->whatsapp_number }}?text=👋%20Hello%20Forno,%20I%20would%20like%20to%20place%20an%20order!"
+                target="_blank">
+                <img src="{{ asset('icons/whatsapp-icon.png') }}" alt="WhatsApp" class="w-10">
+            </a>
+        @endif
+
     </div>
 </nav>

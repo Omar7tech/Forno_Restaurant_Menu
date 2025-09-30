@@ -1,3 +1,7 @@
+@props(['settings'])
+@php
+    $theme = $settings->theme;
+@endphp
 <div class="flex justify-center mt-10 px-4">
     <div class="w-full max-w-md">
         <div class="mockup-window border border-base-300 w-full my-5 mx-auto rounded-2xl shadow-lg bg-base-100">
@@ -9,20 +13,55 @@
                         d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
                 </svg> --}}
                 <img src="{{ asset('images/circle-lebanon.png') }}" alt="" class="w-10">
-                {{-- <img src="{{ asset('images/forno-logo-first.png') }}" alt="Forno Logo"
-                    class="w-32 md:w-40 object-contain"> --}}
+                @if ($theme == 'light')
+                    <img src="{{ asset('images/forno-logo-first.png') }}" alt="Forno Logo"
+                        class="w-32 md:w-40 object-contain">
+                @else
+                    <img src="{{ asset('images/logo-white-nobg.png') }}" alt="Forno Logo"
+                        class="w-32 md:w-40 object-contain">
+                @endif
 
-                <img src="{{ asset('images/logo-white-nobg.png') }}" alt="Forno Logo" class="w-32 md:w-40 object-contain">
+
             </div>
 
             <div class="mx-6 mb-6 bg-base-200 rounded-xl py-4 px-5 flex justify-center items-center gap-2 neon-logo ">
-                <img src="{{ asset('icons/mobile.png') }}" alt="Mobile" class="w-10 hover:scale-110 transition">
-                <img src="{{ asset('icons/whatsapp-footer.png') }}" alt="WhatsApp"
-                    class="w-10 hover:scale-110 transition">
-                <img src="{{ asset('icons/instagram.png') }}" alt="Instagram" class="w-10 hover:scale-110 transition">
-                <img src="{{ asset('icons/facebook.png') }}" alt="Facebook" class="w-10 hover:scale-110 transition">
-                <img src="{{ asset('icons/google-maps.png') }}" alt="Google Maps"
-                    class="w-10 hover:scale-110 transition">
+
+                @if ($settings->phone_active && $settings->phone_number)
+                    <a href="tel: {{ $settings->phone_number }}">
+                        <img src="{{ asset('icons/mobile.png') }}" alt="Mobile"
+                            class="w-10 hover:scale-110 transition">
+                    </a>
+                @endif
+
+                @if ($settings->whatsapp_active && $settings->whatsapp_number)
+                    <a href="https://wa.me/{{ $settings->whatsapp_number }}?text=👋%20Hello%20Forno,%20I%20would%20like%20to%20place%20an%20order!"
+                        target="_blank">
+                        <img src="{{ asset('icons/whatsapp-footer.png') }}" alt="WhatsApp"
+                            class="w-10 hover:scale-110 transition">
+                    </a>
+                @endif
+
+
+                @if ($settings->instagram_url && $settings->instagram_active)
+                    <a href="{{ $settings->instagram_url }}" class="hover:scale-110 transition">
+                        <img src="{{ asset('icons/instagram.png') }}" alt="Instagram"
+                            class="w-10 hover:scale-110 transition">
+                    </a>
+                @endif
+
+                @if ($settings->facebook_url && $settings->facebook_active)
+                    <a href="{{ $settings->facebook_url }}" class="hover:scale-110 transition">
+                        <img src="{{ asset('icons/facebook.png') }}" alt="Facebook"
+                            class="w-10 hover:scale-110 transition">
+                    </a>
+                @endif
+                @if ($settings->location_url && $settings->location_active)
+                    <a href="{{ $settings->location_url }}" class="hover:scale-110 transition">
+                        <img src="{{ asset('icons/google-maps.png') }}" alt="Google Maps"
+                            class="w-10 hover:scale-110 transition">
+                    </a>
+                @endif
+
             </div>
 
         </div>

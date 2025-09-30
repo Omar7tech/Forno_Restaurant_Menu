@@ -1,7 +1,7 @@
 <div>
 
 
-    <x-hero.main2 />
+    <x-hero.main2 :$settings />
     @if ($categories->isNotEmpty())
         <x-categories.title />
         <x-categories.main1 :$categories />
