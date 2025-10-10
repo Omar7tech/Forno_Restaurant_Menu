@@ -17,7 +17,7 @@
                 <h2 class="font-bold text-2xl" itemprop="name">{{ $category->name }}</h2>
 
                 @if ($category->description)
-                    <p class="text-sm text-gray-500 mt-0" itemprop="description">
+                    <p class="text-sm text-gray-500 raleway-400 mt-0" itemprop="description">
                         {{ $category->description }}
                     </p>
                 @endif

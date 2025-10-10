@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'password' => 'fornoadmin',
         ]);
 
-       /*  $this->call([
+        /* $this->call([
             CategorySeeder::class,
             ProductSeeder::class
         ]); */
